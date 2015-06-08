@@ -11,3 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
+/config/datebase.yml
+/config/secret_token.rb

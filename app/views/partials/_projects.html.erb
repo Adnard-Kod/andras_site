@@ -1,0 +1,18 @@
+<ul>
+<a name="projects"></a>
+  <% @projects.each do |project|%>
+  <li>
+    <div class="main-container">
+      <a href="#" class="img">
+        <img src= <%= "/assets/#{project.img}" %> >
+      </a>
+      <div class="bd">
+        <h1><%= project.name %></h1>
+        <p class="project-content"><%= simple_format project.description %></p>
+      </div>
+    </div>
+  </li>
+  <% end %>
+</ul>
+
+

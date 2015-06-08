@@ -1,0 +1,18 @@
+#contacts ul li {
+  display: inline;
+  padding: .5rem;
+}
+#contacts ul li a {
+  color:black;
+}
+
+#contacts {
+  padding: 8rem;
+  font-size: 2rem;
+}
+
+#contacts h1{
+  font-size: 4.5rem;
+}
+
+
