@@ -1,3 +1,29 @@
 <div class="row">
-  <%= _link_to, "" %>
+  <div class="col-md-12">
+    <h1>All Projects!
+      <%= link_to "+ new project", new_admin_project_path,  class: "btn btn-primary pull-right" %>
+    </h1>
+  </div>
 </div>
+<table class="table table-hover table-responsive table-condensed">
+  <thead>
+    <tr>
+      <th>img</th>
+      <th>Name</th>
+      <th>Site</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.try(:each) do |p| %>
+      <tr>
+        <td><%= p.img%></td>
+        <td><%= link_to p.name, edit_admin_project_path(p)%></td>
+        <td><%= p.site%></td>
+        <td><%= p.code%></td>
+        <td class="delete"><%= link_to "x", "/admin/projects/#{p.id}", method: :delete%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

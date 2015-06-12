@@ -14,7 +14,7 @@ body {
   height: 100%;
   position: fixed;
   z-index: -100;
-  background-image: image-url('background_image.jpg');
+  // background-image: image-url('background_image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -27,16 +27,7 @@ ul {
 }
 
 a:link {
-    color: white;
     text-decoration: none;
-}
-
-a:visited {
-    color: white;
-}
-
-a:hover {
-    color: orange;
 }
 
 /*nav_bar*/
