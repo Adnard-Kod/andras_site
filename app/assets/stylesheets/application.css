@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require normalize
+ *= require bootstrap-for-admin.scss
  *= require main
  *= require_self
  *= require_tree .

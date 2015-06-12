@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users, :skip => :registrations
   root 'home#index'
   get 'about/' => 'about#index'
   get 'project/' => 'project#index'
   get 'contact/' => 'contact#index'
+  namespace :admin do
+    resources :projects
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
