@@ -31,9 +31,6 @@ class Admin::ProjectsController < ApplicationController
     end
   end
 
-  def show
-  end
-
   def destroy
     @project.destroy
     redirect_to admin_projects_path
