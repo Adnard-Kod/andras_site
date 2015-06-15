@@ -20,6 +20,7 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def edit
+    @image = Image.new
   end
 
   def update
