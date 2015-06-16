@@ -14,7 +14,7 @@ body {
   height: 100%;
   position: fixed;
   z-index: -100;
-  // background-image: image-url('background_image.jpg');
+  background-image: image-url('background_image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -22,54 +22,43 @@ body {
 
 /*links*/
 
-ul {
-  list-style-type:none;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-/*nav_bar*/
-
-#nav_bar ul li {
-  display: inline;
-  font-size: 1.3rem;
-  padding: .6rem;
-}
-
-#nav_bar {
+#nav-bar-override {
   background-color: black;
-  text-align: center;
+  border: none;
+  height: 60px;
+}
+.navbar-nav {
+  li a {
+  color:white;
+  font-family: huge_agb_v-webfont;
+  font-size: 23px;
+  padding-top: 20px;
+  }
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: white;
+  color: black;
+  height: 60px;
 }
 
-/*header*/
+// /*header*/
 
 .header {
+  font-family: huge_agb_v-webfont, 'Arial';
   text-align: center;
-  font-size: 3rem;
+  margin-top: 200px;
+  margin-bottom: 350px;
   text-shadow: -1px 0 white, 0 2px white, 2px 0 white, 0 -1px white;
+  h1 {
+    font-size: 650%;
+    color:black;
+  }
+  h1:hover {
+    color: white;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+  }
 }
 
-.full-screen-box {
-  min-height: 90vh;
-  padding-top: 30vh;
-  padding-bottom: 30vh;
-}
-
-/*about info*/
-
-/*need to fix the padding*/
-
-.about-box {
-  font-size: 1.3rem;
-  padding-left: 2%;
-  padding-right: 2%;
-}
-
-.about-box p {
-  text-indent: 50px;
-}
 
 /*main boxes*/
 
