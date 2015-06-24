@@ -7,14 +7,10 @@
   <%= f.text_field :site, class: "form-control" %>
 </div>
 <div class="form-group">
-  <%= f.label :code, class: "font-bold" %><br>
-  <%= f.text_field :code, class: "form-control" %>
-</div>
-<div class="form-group">
-  <%= f.label :img, class: "font-bold" %><br>
-  <%= f.text_area :img, class: "form-control" %>
+  <%#= f.label :code, class: "font-bold" %><br>
+  <%#= f.text_field :code, class: "form-control",  %>
 </div>
 <div class="form-group">
   <%= f.label :description, class: "font-bold" %><br>
-  <%= f.text_area :description, class: "form-control" %>
+  <%= f.text_area :description, class: "form-control", :cols => "30", :rows => "10" %>
 </div>

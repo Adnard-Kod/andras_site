@@ -2,11 +2,11 @@
 <a name="projects"></a>
   <% @projects.each do |project|%>
   <li>
-    <div class="main-container">
-      <a href="#" class="img">
-        <img src= <%= "/assets/#{project.img}" %> >
+    <div class="full-height">
+      <a>
+        <%= image_tag project.images.first.picture.url(:large) %>
       </a>
-      <div class="bd">
+    <div>
         <h1><%= project.name %></h1>
         <p class="project-content"><%= simple_format project.description %></p>
       </div>

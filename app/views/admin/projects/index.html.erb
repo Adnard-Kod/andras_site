@@ -17,7 +17,9 @@
   <tbody>
     <% @projects.try(:each) do |p| %>
       <tr>
-        <td><%= p.img%></td>
+        <% if p.images.first %>
+          <td><%= image_tag p.images.first.picture.url(:thumb) %></td>
+        <% end %>
         <td><%= link_to p.name, edit_admin_project_path(p)%></td>
         <td><%= p.site%></td>
         <td><%= p.code%></td>
@@ -27,3 +29,6 @@
   </tbody>
 </table>
 
+<% if current_user.admin? %>
+  <h1><%= link_to "sign_out", destroy_user_session_path, method: :delete %></h1>
+<% end %>

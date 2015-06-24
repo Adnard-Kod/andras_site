@@ -13,3 +13,4 @@
 /tmp
 /config/datebase.yml
 /config/secret_token.rb
+/public/images

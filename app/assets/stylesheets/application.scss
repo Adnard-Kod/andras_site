@@ -11,14 +11,12 @@
  * file per style scope.
  *
  *= require normalize
- *= require bootstrap-for-admin.scss
- *= require main
  *= require_self
- *= require_tree .
  */
 
 // .full-screen-box {
 //   min-height: 90vh;
 //   padding-top: 30vh;
 //   padding-bottom: 30vh;
-
+@import "main";
+// bootstrap-for-admin.scss

@@ -6,7 +6,6 @@ class Admin::ImagesController < ApplicationController
     image = Image.new(image_params)
     image.project_id = @project.id
     image.save
-    binding.pry
     redirect_to edit_admin_project_path(@project)
   end
 
