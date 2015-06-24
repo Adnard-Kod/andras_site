@@ -1,16 +1,14 @@
 
 #contacts {
-  padding-top: 250px;
-  padding-bottom: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   @include background-image(linear-gradient(top, #88A825, #4B5914));
   .contacts-container {
     @include container(70%);
     .col-sm-3 {
     text-align:center;}
       a.image {
-        margin-right: auto;
-        margin-left: auto;
-        font-size: 7sem;
+        font-size: 1.2em;
         color:white
     }
     a:hover {
@@ -25,7 +23,7 @@
   a {
     text-decoration: none;
     h1 {
-      font-size: 7em;
+     font-size: 4.5em;
       color: white;
     }
   }
@@ -37,8 +35,15 @@
   }
 }
 
-@media (max-width: $small) {
-    .contacts-heading a h1 {
-      font-size: 4em;
-    }// h1
+@media (max-width: $medium) {
+  #contacts {
+  .contacts-container {
+    a.image {
+        font-size: .7em;
+      }
+    }
+  }
+  .contacts-heading a h1 {
+    font-size: 4em;
+  }// h1
 }// media
