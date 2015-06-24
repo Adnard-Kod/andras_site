@@ -15,6 +15,26 @@ $(function () {
       } //location hostname
     }); //on click
 
+    //scroll navbar active
+    $(window).scroll(function() {
+      var windowPosition = $(window).scrollTop() + topoffset;
+      $('nav li a').removeClass('active');
+      if (windowPosition > $("#aboutMe").offset().top) {
+        $('nav li a').removeClass('active');
+        $("a[href$=#aboutMe]").addClass("active")
+      }
+
+      if (windowPosition > $("#contacts").offset().top) {
+        $('nav li a').removeClass('active');
+        $("a[href$=#about]").addClass("active")
+      }
+
+      if (windowPosition > $("#projects").offset().top) {
+        $('nav li a').removeClass('active');
+        $("a[href$=#about]").addClass("active")
+      }
+    });
+
   var controller = new ScrollMagic({
      globalSceneOptions: {
        triggerHook: "onLeave"
