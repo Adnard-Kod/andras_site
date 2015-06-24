@@ -26,7 +26,6 @@
         }// a
         h1 {
           @include text-shadow($light 0 0 5px);
-          color: #820233;
           font-size: 3em;
           padding: 0;
           margin: 0;
@@ -41,18 +40,9 @@
   }// .project-box
 }//# project
 
-
-.image-wrapper {
-  height-max: 500px;
-  overflow: hidden;
-  @include border-bottom-radius(20px);
+#projects .project-box .project .content a:hover {
+  color: $yellow;
 }
-
-img.project-image {
-  width: 100%;
-  height: auto;
-}//  .image-wrapper
-
 
 @media (min-width: $small) {
   #projects {
@@ -79,3 +69,34 @@ img.project-image {
     @include border-radius(20px);
   }// .image-wrapper
 }// media
+
+
+.image-wrapper {
+  height: 400px;
+  overflow: hidden;
+  @include border-bottom-radius(20px);
+}
+
+img.project-image {
+  width: 100%;
+  height: auto;
+}//  .image-wrapper
+
+
+@media (min-width: $small) {
+  .image-wrapper {
+    height: 500px;
+  }
+} // #projects
+
+@media (min-width: $medium) {
+  .image-wrapper {
+    height: 550px;
+  }
+} // #projects
+
+@media (min-width: $wide) {
+  .image-wrapper {
+    height: 650px;
+  }
+} // #projects

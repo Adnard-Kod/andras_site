@@ -4,13 +4,13 @@
     <div class="image-wrapper">
       <%= image_tag project.images.first.picture.url(:large), class: "project-image" %>
     </div>
-      <article class="project">
-        <section class="content">
-          <h1><%= project.name %></h1>
-          <p><%= simple_format project.description %></p>
-          <p><%= link_to project.site %></p>
-        </section>
-      </article>
+    <article class="project">
+      <section class="content">
+        <h1><%= project.name %></h1>
+        <p><%= simple_format project.description %></p>
+        <p><%= link_to project.site, class: "website" %></p>
+      </section>
+    </article>
     </div>
   <% end %>
 </div>

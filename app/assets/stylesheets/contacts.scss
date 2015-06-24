@@ -1,1 +1,44 @@
 
+#contacts {
+  padding-top: 250px;
+  padding-bottom: 200px;
+  @include background-image(linear-gradient(top, #88A825, #4B5914));
+  .contacts-container {
+    @include container(70%);
+    .col-sm-3 {
+    text-align:center;}
+      a.image {
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 7sem;
+        color:white
+    }
+    a:hover {
+      color: $yellow;
+      @include text-shadow($dark 0 0 5px);
+    }
+  }
+}
+
+.contacts-heading {
+  text-align: center;
+  a {
+    text-decoration: none;
+    h1 {
+      font-size: 7em;
+      color: white;
+    }
+  }
+  h1:hover {
+    @include text-shadow($dark 0 0 5px);
+    font-weight: $bold;
+    padding-right: 10px;
+    color: $yellow;
+  }
+}
+
+@media (max-width: $small) {
+    .contacts-heading a h1 {
+      font-size: 4em;
+    }// h1
+}// media
