@@ -1,18 +1,15 @@
-<ul>
-<a name="projects"></a>
+<div id="projects">
   <% @projects.each do |project|%>
-  <li>
-    <div class="full-height">
-      <a>
-        <%= image_tag project.images.first.picture.url(:large) %>
-      </a>
-    <div>
-        <h1><%= project.name %></h1>
-        <p class="project-content"><%= simple_format project.description %></p>
-      </div>
+  <div class="project-box">
+    <%= image_tag project.images.first.picture.url(:large), class: "project-image" %>
+      <article class="project">
+        <section class="content">
+          <h1><%= project.name %></h1>
+          <p><%= simple_format project.description %></p>
+          <p><%= link_to project.site %></p>
+        </section>
+      </article>
     </div>
-  </li>
   <% end %>
-</ul>
-
+</div>
 

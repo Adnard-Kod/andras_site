@@ -1,0 +1,33 @@
+nav {
+  @include clearfix;
+  @include background-image( linear-gradient(top, lighten($dark , 10), $dark ));
+  width: 100%;
+  #navbar {
+    @include container;
+    a {
+      color: $navForeground;
+      text-decoration: none;
+      text-align: center;
+      font-size: 2em;
+    } //a
+    ul {
+      li {
+        float: right;
+        a {
+          display: inline-block;
+          span {padding: 5px;}
+          color: $navForeground;
+          font: $mainFont;
+          font-size: 2em;
+          padding: 10px;
+          &:hover {
+            background-color: $navHover;
+          }// hover
+          @include breakpoint (0 $small) {
+            span {display: none;}
+          }//break
+        }//a
+      }// li
+    }// ul
+  }// #navbar
+}// nav

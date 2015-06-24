@@ -1,13 +1,32 @@
-/*about info*/
+#about {
+  @include background-image(linear-gradient( top, $yellow, $orange));
+  article {
+  text-align: center;
+  @include container(70%);
+  @include breakpoint($small $medium) {
+    @include container(80%);
+  }
+  @include breakpoint(0 $small) {
+    @include container(95%);
+    p {
+      font-size: 1.2em;
+    }
+  }
+  padding: 20px;
+  }
+  h1 {
+    font-weight: $bold;
+    font-size: 2.5em;
+    line-height: 1.5em;
+    color: darken($orange, 20);
+    padding: 10px 0;
+  }
+  p {
+    font-weight: $thin;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    padding-bottom: 25px;
 
-.about-box {
-  font-size: 2rem;
-  padding-left: 2%;
-  padding-right: 2%;
-  font-family: GalaxieCopernicus-Book;
-  margin-bottom: 200px;
+  }
 }
 
-.about-box p {
-  text-indent: 50px;
-}

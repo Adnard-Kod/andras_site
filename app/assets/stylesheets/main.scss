@@ -19,9 +19,33 @@
 @import "mixins";
 @import "base";
 @import "layout";
+
+
 @import "contacts";
+@import "navbar";
 @import "about";
+@import "projects";
+
 .container { @include container; }
+
+.main-image {
+  @include backImage('http://content.finda.photo/unsplash/oFAVqfTSby8.jpg');
+}
+
+header {
+  padding: 200px;
+  position: absolute;
+  h1 {
+    @include text-shadow($dark 0 0 10px);
+    margin: auto;
+    color: $light;
+    font-size: 8em;
+    font-weight: $heavy ;
+    line-height: .8em;
+    text-align: center;
+  }
+}
+
 // admin css
 .table {
   background-color: white;

@@ -1,0 +1,43 @@
+#projects {
+  @include background-image(linear-gradient( top, $yellow, $orange));
+  .project {
+    position: relative;
+    .content {
+      @include breakpoint(0 $medium) {
+        position: relative;
+        background: rgba($dark, .95);
+      }
+      background: rgba($dark, .8);
+      width: 100%;
+      position: absolute;
+      bottom: 5px;
+      font-variant: $thin;
+      h1 {
+        padding: 5px;
+        height-line: 130%;
+        color: $blue;
+      }
+      p {
+        padding: 10px;
+        color: white;
+      }
+
+    }
+  }
+}
+
+.project-box {
+  @include container(90%);
+  margin-bottom: 100px;
+  @include breakpoint(0 $medium) {
+    margin-bottom: 40px;
+    position: relative;
+    background: rgba($dark, .95);
+  }
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+
+}
