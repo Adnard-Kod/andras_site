@@ -1,5 +1,6 @@
 $(function () {
   var topoffset = 45;
+
   // Animated Scrolling
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -19,7 +20,15 @@ $(function () {
        triggerHook: "onLeave"
      }
   });
+
+  //pinning navbar
   var pinNavbar = new ScrollScene({
     triggerElement: "#nav",
   }).setPin("#nav").addTo(controller)
+
+  //tween about me
+  var aboutMe = TweenMax.staggerFromTo("#about article", 1, { delay: 1, opacity: 1, scale: 1, ease: Back.eastOut}, { opacity: 0, scale: 0 });
+  var screen = new ScrollScene({
+    triggerElement: "#aboutMe"
+  }).setTween(aboutMe).addTo(controller)
 })
