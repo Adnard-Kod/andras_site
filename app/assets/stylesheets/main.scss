@@ -28,13 +28,18 @@
 
 .container { @include container; }
 
-.main-image {
-  @include backImage('http://content.finda.photo/unsplash/oFAVqfTSby8.jpg');
+header {
+  // @include background-image(linear-gradient(top, $light, lighten($yellow, 35)));
+  background-image: image-url('http://content.finda.photo/unsplash/oFAVqfTSby8.jpg') ;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 header {
-  padding: 200px;
-  position: absolute;
+  padding-top: 200px;
+  margin: auto;
   h1 {
     @include text-shadow($dark 0 0 10px);
     margin: auto;
@@ -45,6 +50,27 @@ header {
     text-align: center;
   }
 }
+
+@media (max-width: $medium) {
+  header {
+   h1 {
+     @include text-shadow($dark 0 0 10px);
+     color: $light;
+     font-size: 7em;
+     }// h1
+  }// header
+}// media
+
+
+@media (max-width: $small) {
+  header {
+   h1 {
+     @include text-shadow($dark 0 0 10px);
+     color: $light;
+     font-size: 5em;
+     }// h1
+  }// header
+}// media
 
 // admin css
 .table {

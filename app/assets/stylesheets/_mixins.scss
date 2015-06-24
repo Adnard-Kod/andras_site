@@ -1,3 +1,14 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  } //before, after
+  &:after {
+    clear: both;
+  } //after
+} //clearfix
+
 @mixin backImage(
   $image,
   $grDir: to bottom,

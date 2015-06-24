@@ -1,65 +1,81 @@
 #projects {
-  padding-top: 90px;
-  padding-bottom: 60px;
+  padding-top: 70px;
+  padding-bottom: 70px;
   @include background-image(linear-gradient( top, #530031, #2D112C));
   .project-box {
-    margin-bottom: 70px;
-    @include container(80%);
-    @include breakpoint(0 $medium) {
-      position: relative;
-      margin-bottom: 50px;
-      background: rgba($dark, .95);
-    }
-  .project {
     position: relative;
-    .content {
-      @include border-bottom-radius(20px);
-      @include breakpoint(0 $medium) {
+    margin-bottom: -20px;
+    @include container(80%);
+    .project {
+      bottom: 60px;
+      .content {
         position: relative;
-        top: 10px;
-        background: rgba($dark, .95);
-       }
-      background: rgba($dark, .8);
-      width: 100%;
-      bottom: 0;
-      position: absolute;
-      a {
-        @include text-shadow($light 0 0 10px);
-        color: #20122D;
-        font-weight: $bold;
-        font-size: 1.5em;
-        text-decoration: none;
-        &:hover {
-          color: darken(#20122D, 10);
-        }
-      }
-      h1 {
-        @include text-shadow($light 0 0 5px);
-        color: #820233;
-        font-size: 4em;
-        padding: 0;
-        margin: 0;
-        padding-left: 10px;
-
-      }
-      p {
-        padding: 10px;
-        color: white;
+        bottom: 60px;
+        @include border-bottom-radius(20px);
+        background: rgba($dark, .7);
+        width: 100%;
+        a {
+          @include text-shadow($light 0 0 10px);
+          color: #20122D;
+          font-weight: $bold;
+          font-size: 1.5em;
+          text-decoration: none;
+          &:hover {
+            color: darken(#20122D, 10);
+          }// hover
+        }// a
+        h1 {
+          @include text-shadow($light 0 0 5px);
+          color: #820233;
+          font-size: 3em;
+          padding: 0;
+          margin: 0;
+          padding-left: 10px;
+        }// h1
+        p {
+          padding: 15px;
+          color: white;
         }// p
-      }// h1
-    }
-  }// project-box
+      }// .content
+    }// .project
+  }// .project-box
+}//# project
+
+
 .image-wrapper {
   height-max: 500px;
   overflow: hidden;
-  @include border-radius(20px);
-  @include breakpoint(0 $medium) {
-  }
+  @include border-bottom-radius(20px);
 }
 
 img.project-image {
   width: 100%;
   height: auto;
-  }// .project-image
 }//  .image-wrapper
 
+
+@media (min-width: $small) {
+  #projects {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    .project-box {
+      margin-bottom: 50px;
+    .project {
+      .content {
+        bottom: 0;
+        position: absolute;
+        background: rgba($dark, .7);
+        h1 {
+          @include text-shadow($light 0 0 5px);
+          font-size: 5em;
+          }
+        }// .content
+      }// .project
+    }// .project-box
+  } // #projects
+  .image-wrapper {
+    height-max: 500px;
+    overflow: hidden;
+    @include border-radius(20px);
+  }// .image-wrapper
+}// media
