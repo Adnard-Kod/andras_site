@@ -1,43 +1,65 @@
 #projects {
-  @include background-image(linear-gradient( top, $yellow, $orange));
+  padding-top: 90px;
+  padding-bottom: 60px;
+  @include background-image(linear-gradient( top, #530031, #2D112C));
+  .project-box {
+    margin-bottom: 70px;
+    @include container(80%);
+    @include breakpoint(0 $medium) {
+      position: relative;
+      margin-bottom: 50px;
+      background: rgba($dark, .95);
+    }
   .project {
     position: relative;
     .content {
+      @include border-bottom-radius(20px);
       @include breakpoint(0 $medium) {
         position: relative;
+        top: 10px;
         background: rgba($dark, .95);
-      }
+       }
       background: rgba($dark, .8);
       width: 100%;
+      bottom: 0;
       position: absolute;
-      bottom: 5px;
-      font-variant: $thin;
+      a {
+        @include text-shadow($light 0 0 10px);
+        color: #20122D;
+        font-weight: $bold;
+        font-size: 1.5em;
+        text-decoration: none;
+        &:hover {
+          color: darken(#20122D, 10);
+        }
+      }
       h1 {
-        padding: 5px;
-        height-line: 130%;
-        color: $blue;
+        @include text-shadow($light 0 0 5px);
+        color: #820233;
+        font-size: 4em;
+        padding: 0;
+        margin: 0;
+        padding-left: 10px;
+
       }
       p {
         padding: 10px;
         color: white;
-      }
-
+        }// p
+      }// h1
     }
-  }
-}
-
-.project-box {
-  @include container(90%);
-  margin-bottom: 100px;
+  }// project-box
+.image-wrapper {
+  height-max: 500px;
+  overflow: hidden;
+  @include border-radius(20px);
   @include breakpoint(0 $medium) {
-    margin-bottom: 40px;
-    position: relative;
-    background: rgba($dark, .95);
   }
 }
 
-.project-image {
+img.project-image {
   width: 100%;
   height: auto;
+  }// .project-image
+}//  .image-wrapper
 
-}

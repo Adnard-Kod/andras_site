@@ -1,7 +1,9 @@
 <div id="projects">
   <% @projects.each do |project|%>
   <div class="project-box">
-    <%= image_tag project.images.first.picture.url(:large), class: "project-image" %>
+    <div class="image-wrapper">
+      <%= image_tag project.images.first.picture.url(:large), class: "project-image" %>
+    </div>
       <article class="project">
         <section class="content">
           <h1><%= project.name %></h1>
