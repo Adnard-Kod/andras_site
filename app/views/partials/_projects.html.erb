@@ -8,7 +8,7 @@
       <section class="content">
         <h1><%= project.name %></h1>
         <p><%= simple_format project.description %></p>
-        <p><%= link_to project.site, class: "website" %></p>
+        <p><%= link_to project.site, project.site, class: "website" %></p>
       </section>
     </article>
     </div>
