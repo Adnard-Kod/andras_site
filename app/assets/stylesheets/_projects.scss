@@ -1,16 +1,13 @@
 #projects {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 90px;
+  padding-bottom: 90px;
   @include background-image(linear-gradient( top, #530031, #2D112C));
   .project-box {
-    position: relative;
-    margin-bottom: -20px;
     @include container(80%);
     .project {
       bottom: 60px;
       .content {
-        position: relative;
-        bottom: 60px;
+        padding: 10px;
         @include border-bottom-radius(20px);
         background: rgba($dark, .7);
         width: 100%;
@@ -26,13 +23,11 @@
         }// a
         h1 {
           @include text-shadow($light 0 0 5px);
-          font-size: 3em;
+          font-size: 2.5em;
           padding: 0;
           margin: 0;
-          padding-left: 10px;
         }// h1
         p {
-          padding: 15px;
           color: white;
         }// p
       }// .content
@@ -44,59 +39,55 @@
   color: $yellow;
 }
 
-@media (min-width: $small) {
-  #projects {
-    padding-top: 90px;
-    padding-bottom: 90px;
-    .project-box {
-      margin-bottom: 50px;
-    .project {
-      .content {
-        bottom: 0;
-        position: absolute;
-        background: rgba($dark, .7);
-        h1 {
-          @include text-shadow($light 0 0 5px);
-          font-size: 5em;
-          }
-        }// .content
-      }// .project
-    }// .project-box
-  } // #projects
-  .image-wrapper {
-    height-max: 500px;
-    overflow: hidden;
-    @include border-radius(20px);
-  }// .image-wrapper
-}// media
-
-
 .image-wrapper {
-  height: 400px;
+  @include border-top-radius(20px);
+  margin-top: 50px;
+  height: 200px;
   overflow: hidden;
-  @include border-bottom-radius(20px);
 }
-
-img.project-image {
-  width: 100%;
-  height: auto;
-}//  .image-wrapper
-
 
 @media (min-width: $small) {
   .image-wrapper {
     height: 500px;
+    @include border-radius(20px);
   }
-} // #projects
+    #projects {
+      .project-box {
+        margin-bottom: 70px;
+      .project {
+          position: relative;
+          bottom: 5px;
+        .content {
+          bottom: -5px;
+          position: absolute;
+          background: rgba($dark, .7);
+          }// .content
+      }// .project
+    }// .project-box
+  } 
+} // #
 
 @media (min-width: $medium) {
-  .image-wrapper {
-    height: 550px;
-  }
-} // #projects
 
-@media (min-width: $wide) {
   .image-wrapper {
     height: 650px;
+    @include border-radius(20px);
+    img {
+      width: 100%;
+    }
   }
+    #projects {
+      .project-box {
+        margin-bottom: 90px;
+      .project {
+        .content {
+          background: rgba($dark, .7);
+          h1 {
+            font-size: 4em;
+          }
+        }// .content
+      }// .project
+    }// .project-box
+  } 
 } // #projects
+

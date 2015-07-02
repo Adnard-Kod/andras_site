@@ -1,5 +1,6 @@
 $(function () {
   var topoffset = 45;
+  if($("#aboutMe")) {
 
   // Animated Scrolling
     $('a[href*=#]:not([href=#])').click(function() {
@@ -51,4 +52,5 @@ $(function () {
   var screen = new ScrollScene({
     triggerElement: "#aboutMe"
   }).setTween(aboutMe).addTo(controller)
+  }
 })
