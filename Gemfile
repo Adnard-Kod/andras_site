@@ -25,7 +25,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pry'
-gem 'paperclip'
+gem "paperclip", "~> 3.0"
+gem 'aws-sdk'
 gem 'bootstrap-sass'
 gem 'sass-rails', '5.0.0.beta1' # This is the important bit since it supports Sass 3.3    
 gem 'compass-rails', '~> 2.0.0'
