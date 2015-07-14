@@ -21,11 +21,11 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-
+gem 'puma'
 gem 'devise'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pry'
-gem "paperclip", "~> 3.0"
+gem "paperclip"
 gem 'aws-sdk'
 gem 'bootstrap-sass'
 gem 'sass-rails', '5.0.0.beta1' # This is the important bit since it supports Sass 3.3    
