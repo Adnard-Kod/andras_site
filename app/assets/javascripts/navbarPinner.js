@@ -16,7 +16,6 @@ $(function () {
       } //location hostname
     }); //on click
 
-  if(!$("#nav") === []){
     //scroll navbar active
     $(window).scroll(function() {
       var windowPosition = $(window).scrollTop() + topoffset;
@@ -53,6 +52,5 @@ $(function () {
     var screen = new ScrollScene({
       triggerElement: "#aboutMe"
     }).setTween(aboutMe).addTo(controller)
-  }
   }
 })
