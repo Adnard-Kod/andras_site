@@ -16,6 +16,7 @@ $(function () {
       } //location hostname
     }); //on click
 
+  if(!$("#nav") === []){
     //scroll navbar active
     $(window).scroll(function() {
       var windowPosition = $(window).scrollTop() + topoffset;
@@ -42,15 +43,16 @@ $(function () {
      }
   });
 
-  //pinning navbar
-  var pinNavbar = new ScrollScene({
-    triggerElement: "#nav",
-  }).setPin("#nav").addTo(controller)
+    //pinning navbar
+    var pinNavbar = new ScrollScene({
+      triggerElement: "#nav",
+    }).setPin("#nav").addTo(controller)
 
-  //tween about me
-  var aboutMe = TweenMax.staggerFromTo("#about article", 1, { delay: 1, opacity: 1, scale: 1, ease: Back.eastOut}, { opacity: 0, scale: 0 });
-  var screen = new ScrollScene({
-    triggerElement: "#aboutMe"
-  }).setTween(aboutMe).addTo(controller)
+    //tween about me
+    var aboutMe = TweenMax.staggerFromTo("#about article", 1, { delay: 1, opacity: 1, scale: 1, ease: Back.eastOut}, { opacity: 0, scale: 0 });
+    var screen = new ScrollScene({
+      triggerElement: "#aboutMe"
+    }).setTween(aboutMe).addTo(controller)
+  }
   }
 })

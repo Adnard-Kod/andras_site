@@ -3,6 +3,7 @@ class Admin::ImagesController < ApplicationController
   before_action :authenticate_user!
 
   def upload
+    @project.images.destroy_all
     image = Image.new(image_params)
     image.project_id = @project.id
     image.save
