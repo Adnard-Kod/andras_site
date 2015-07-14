@@ -78,6 +78,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.paperclip_defaults = {
     :storage => :s3,
-    s3_credentials: 'config/s3.yml'
+    s3_credentials: "#{Rails.root}/config/s3.yml"
   }
 end
