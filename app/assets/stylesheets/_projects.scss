@@ -29,7 +29,17 @@
         }// h1
         p {
           color: white;
+          font-weight: 300;
+          font-size: 1.2em;
+          padding-bottom: 10px;
+          letter-spacing: 1px;
+          padding: 0 20px 10px 20px;
         }// p
+        .website {
+          padding-left: 20px;
+          padding-bottom: 25px;
+          font-size: 1em;
+        }
       }// .content
     }// .project
   }// .project-box
